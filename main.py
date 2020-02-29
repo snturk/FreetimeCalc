@@ -12,19 +12,26 @@ def replace(array, index):
         array[index + 1] = store
 
 print("Welcome to The Freetime Calculator")
-print("Choose a beginning time for your day: (xx.xx)")
-begTime = float(input())
-print("Now choose an end time for your day: (xx.xx)")
-endTime = float(input())
-totalTime.append(begTime)
-totalTime.append(endTime)
+while True:
+    print("Choose a beginning time for your day: (xx.xx)")
+    begTime = float(input())
+    print("Now choose an end time for your day: (xx.xx)")
+    endTime = float(input())
+    if begTime >= endTime:
+        print("Wrong time format")
+    else:
+        totalTime.append(begTime)
+        totalTime.append(endTime)
+        break
 
 while cmd != 3:
     cmd = 0
-    print("Choose an operation:")
-    print("1- Add an event")
-    print("2- Show freetimes")
-    print("3- Exit")
+    print(
+"""Choose an operation:
+1- Add event
+2- Show freetimes
+3- Exit"""
+    )
     cmd = int(input())
 
     if cmd == 1:
