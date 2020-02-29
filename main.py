@@ -9,6 +9,20 @@ def replace(array, index):
         array[index] = array[index + 1]
         array[index + 1] = store
 
+def checkSch(array, eventStart, eventStop, dayStart, dayStop):
+    intercept = 0
+    if dayStart <= eventStart < eventStop and eventStop <= dayStop:
+        for i in range(len(array)):
+            if eventStart >= array[i][1]:
+                intercept = 0
+            elif eventEnd <= array[i][0]:
+                intercept = 0
+            else:
+                intercept = 1
+    else:
+        intercept = 1
+    return intercept
+
 print("Welcome to The Freetime Calculator")
 while True:
     print("Choose a beginning time for your day: (xx.xx)")
@@ -37,7 +51,8 @@ while cmd != 3:
         eventStart = float(input())
         print("Add an event end time: (xx.xx)")
         eventEnd = float(input())
-        if eventStart >= begTime and eventEnd <= endTime:
+        if not checkSch(schUnordered, eventStart, eventEnd, begTime, endTime):
+
             schUnordered.append([eventStart, eventEnd])
             print("Event has been added")
         else:
