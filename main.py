@@ -6,7 +6,6 @@ ftimeTotal = 0
 order = 0
 
 def replace(array, index):
-        global store
         store = array[index]
         array[index] = array[index + 1]
         array[index + 1] = store
@@ -43,7 +42,7 @@ while cmd != 3:
             schU.append([eventStart, eventEnd])
             print("Event has been added")
         else:
-            print("Event time is not compatible with your beginning/ending time of your day.")
+            print("Event time is not compatible with your beginning/ending time of your day...")
     elif cmd == 2:
         freeTime = []
         for i in range(len(schU) - 1):
