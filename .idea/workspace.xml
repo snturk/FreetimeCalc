@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1868214f-8e3c-4c16-bf83-a057a8dd2850" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="1868214f-8e3c-4c16-bf83-a057a8dd2850" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,6 +82,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="377" y="51" key="CommitChangelistDialog2" timestamp="1582984750517">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="377" y="51" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1582984750517" />
     <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1582984274147">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
