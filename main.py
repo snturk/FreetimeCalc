@@ -1,6 +1,5 @@
 cmd = 0
-schU = []
-aabb = [[13.30, 14.50], [11.30, 13.20], [13.22, 13.25]]
+schUnordered = []
 totalTime = []
 ftimeTotal = 0
 order = 0
@@ -39,30 +38,30 @@ while cmd != 3:
         print("Add an event end time: (xx.xx)")
         eventEnd = float(input())
         if eventStart >= begTime and eventEnd <= endTime:
-            schU.append([eventStart, eventEnd])
+            schUnordered.append([eventStart, eventEnd])
             print("Event has been added")
         else:
             print("Event time is not compatible with your beginning/ending time of your day...")
     elif cmd == 2:
         freeTime = []
-        for i in range(len(schU) - 1):
-            if schU[i][0] > schU[i + 1][0]:
-                replace(schU, i)
-        if schU[0][0] != totalTime[0]:
-            freeTime.insert(order, [totalTime[0], schU[0][0]])
+        for i in range(len(schUnordered) - 1):
+            if schUnordered[i][0] > schUnordered[i + 1][0]:
+                replace(schUnordered, i)
+        if schUnordered[0][0] != totalTime[0]:
+            freeTime.insert(order, [totalTime[0], schUnordered[0][0]])
             order += 1
 
-        for i in range(len(schU) - 1):
+        for i in range(len(schUnordered) - 1):
             ftimeStart = 0
             ftimeEnd = 0
-            if schU[i][1] != schU[i + 1][0]:
-                ftimeStart = float(schU[i][1])
-                ftimeEnd = float(schU[i + 1][0])
+            if schUnordered[i][1] != schUnordered[i + 1][0]:
+                ftimeStart = float(schUnordered[i][1])
+                ftimeEnd = float(schUnordered[i + 1][0])
                 ftimeTotal += ftimeEnd - ftimeStart
                 freeTime.append([ftimeStart, ftimeEnd])
 
-        if schU[-1][1] != totalTime[1]:
-            freeTime.append([schU[-1][1], totalTime[1]])
+        if schUnordered[-1][1] != totalTime[1]:
+            freeTime.append([schUnordered[-1][1], totalTime[1]])
 
         print("Your freetimes:")
         for i in range(len(freeTime)):
