@@ -9,9 +9,12 @@ def replace(array, index):
         array[index] = array[index + 1]
         array[index + 1] = store
 
+
 def checkSch(array, eventStart, eventStop, dayStart, dayStop):
+
     intercept = 0
-    if dayStart <= eventStart < eventStop and eventStop <= dayStop:
+
+    if dayStart <= eventStart < eventStop <= dayStop:
         for i in range(len(array)):
             if eventStart >= array[i][1]:
                 intercept = 0
